@@ -228,7 +228,7 @@ header {
 
 #header-band {
     background-color: #1b1464;
-    height: 0px;
+    height: 50px;
 
 
 }
@@ -273,7 +273,7 @@ nav {
 nav ul {
     list-style-type: none;
     margin-left: 30px;
-    width: 0px;
+    width: 50px;
 }
 
 nav li {
