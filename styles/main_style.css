@@ -228,14 +228,14 @@ header {
 
 #header-band {
     background-color: #1b1464;
-    height:100px;
+    height:80px;
 
 
 }
 
 #header-text {
     text-align: left;
-    max-width: 1060px;
+    
     margin-top: -105px;
 }
 
