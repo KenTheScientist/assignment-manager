@@ -127,7 +127,7 @@ ol li {
 
 .center-block {
     margin: auto;
-    min-width: 960px;
+    min-width: 0px; /*originally 960*/
     max-width: 1060px;
     text-align: right;
 }
