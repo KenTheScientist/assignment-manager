@@ -264,7 +264,7 @@ header img {
 /********* Navigation *********/
 
 nav {
-    position: fixed;
+    position: absolute;
     top: 295px;
     margin-left: 0px;
     z-index: 100;
@@ -292,12 +292,12 @@ nav a {
 
 #active-nav {
     font-size: 1.2em;
-    position: relative;
+    position: absolute;
 }
 
 #active-nav-secondary {
     font-size: 1.2em;
-    position: relative;
+    position: absolute;
 }
 
 #active-nav img {
@@ -314,7 +314,7 @@ nav a {
 
 #active-nav-secondary {
     font-size: 1.2em;
-    position: relative;
+    position: absolute;
 }
 
 #active-nav-secondary img {
@@ -421,7 +421,7 @@ section ul li {
     text-align: center;
     width: 0px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -30px;
     right: 350px;
     font-size: 1.3em;
@@ -431,7 +431,7 @@ section ul li {
     text-align: center;
     width: 0px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -55px;
     right: 130px;
     font-size: 1.3em;
@@ -441,7 +441,7 @@ section ul li {
     text-align: center;
     width: 0px;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -55px;
     right: 45px;
     font-size: 1.3em;
@@ -478,7 +478,7 @@ section ul li {
 
 #arrow-right {
     padding-left: 20px;
-    position: relative;
+    position: absolute;
     top: 15px;
 
 }
@@ -566,7 +566,7 @@ hr {
 
 
 footer ul {
-    position: relative;
+    position: absolute;
     left: 113px;
     list-style-type: none;
     font-size: 0.9em;
