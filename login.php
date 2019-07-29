@@ -2,8 +2,8 @@
 // Start the session
 session_start();
 // Initialize session variables
-if (!isset($_SESSION['gamer'])) {
-    $_SESSION['gamer'] = 1;
+if (!isset($_SESSION['student'])) {
+    $_SESSION['student'] = 1;
 }
 if (!isset($_SESSION['error'])) {
     $_SESSION['error']='';
@@ -15,23 +15,23 @@ $db = get_db();
 
 <!DOCTYPE html>
 <!--
-This is the login page for the Board Game Whisperer
-Author: Nikkala Thomson
+Login Page
+Author: Ken Thomson
 -->
 
 <html lang="en-us">
 
 <head>
-    <?php $ROOT = '../';
-    include '../modules/head.php'; ?>
-    <title>The Board Game Whisperer</title>
+    <?php $ROOT = '';
+    include 'modules/head.php'; ?>
+    <title>Homework Manager</title>
 </head>
 
 <body>
     <header>
         <div id="header-band"></div>
         <div id="header-text" class="center-block">
-            <h1>The Board Game Whisperer</h1>
+            <h1>Homework Manager</h1>
         </div>
     </header>
     <div class=center-block>
@@ -41,7 +41,7 @@ Author: Nikkala Thomson
                 <li id="active-nav"><a href="login.php">Login<img src="../images/yellow-arrow.png" alt=""></a></li>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="edit_profile.php">Profile</a></li>
-                <li><a href="games.php">Get Games</a></li>
+                
             </ul>
         </nav>
         <main>
@@ -50,12 +50,12 @@ Author: Nikkala Thomson
             <section class="wide-section">
                 <br>
                 <p> You are logged in as <?php
-                    $gamer = $_SESSION['gamer'];
-                    $query = "SELECT display_name FROM gamer g WHERE g.gamer = $gamer";
+                    $student = $_SESSION['student'];
+                    $query = "SELECT display_name FROM student g WHERE g.student = $student";
                     $statement = $db->prepare($query);
                     $statement->execute();   
-                    $gamer_data = $statement->fetch(PDO::FETCH_ASSOC);
-                    echo $gamer_data['display_name'];
+                    $student_data = $statement->fetch(PDO::FETCH_ASSOC);
+                    echo $student_data['display_name'];
                 ?>. Log in as a different user below.</p><br>
                 <?php echo $_SESSION['error']; 
                 $_SESSION['error'] = ''; ?>
