@@ -70,13 +70,13 @@ input[type=email]:focus {
 
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background-image: url("../images/diagmonds-blue.png");
+    background-image: url("images/diagmonds-blue.png");
     color: #ffffff;
-    
+    min-width: 1080px;
     margin: auto;
     overflow-y: scroll;
     overflow-x: hidden;
-    margin-left: 0px;
+    margin-left: -100px;
 }
 
 h1,
@@ -113,7 +113,7 @@ li {
 
 ol {
     padding-left: 2em;
-    
+    text-indent: -2.3em;
     padding-bottom: 15px;
 }
 
@@ -222,20 +222,20 @@ a:active {
 /******* Header Styles ********/
 
 header {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 #header-band {
     background-color: #1b1464;
-    height:80px;
+    height: 108px;
 
 
 }
 
 #header-text {
-    text-align: left;
-    
+    text-align: right;
+    max-width: 1060px;
     margin-top: -105px;
 }
 
@@ -264,17 +264,16 @@ header img {
 /********* Navigation *********/
 
 nav {
-    position: absolute;
+    position: fixed;
     top: 295px;
-    margin-left: 0px;
+    margin-left: 80px;
     z-index: 100;
 }
 
 nav ul {
     list-style-type: none;
     margin-left: 30px;
-    width: 0px;
-	height: 50px;
+    width: 150px;
 }
 
 nav li {
@@ -292,7 +291,7 @@ nav a {
 
 #active-nav {
     font-size: 1.2em;
-    position: absolute;
+    position: relative;
 }
 
 #active-nav-secondary {
@@ -419,7 +418,7 @@ section ul li {
 
 .triangle-text-top {
     text-align: center;
-    width: 0px;
+    width: 300px;
     display: inline-block;
     position: relative;
     top: -30px;
@@ -429,7 +428,7 @@ section ul li {
 
 .triangle-text-bottom-left {
     text-align: center;
-    width: 0px;
+    width: 300px;
     display: inline-block;
     position: relative;
     top: -55px;
@@ -439,7 +438,7 @@ section ul li {
 
 .triangle-text-bottom-right {
     text-align: center;
-    width: 0px;
+    width: 300px;
     display: inline-block;
     position: relative;
     top: -55px;
