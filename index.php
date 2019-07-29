@@ -38,22 +38,8 @@ Author: Ken
             </ul>
         </nav>
         <main>
-            <div class="flex">
-                <section>
-                    <p>Playing board games creates precious experiences and lasting memories. </p>
-                    <br>
-                    <p>Consider trying out a new board game today!</p>
-
-                </section>
-                <section>
-                    <ul>
-                        <li><a href="register.php">New? Register today.</a></li>
-                        <li><a href="login.php">Been here before? Login.</a></li>
-                        <li><a href="games.php">Get a game recommendation.</a></li>
-                        <li><a href="edit_profile.php">Edit your user profile.</a></li>
-                    </ul>
-                </section>
-            </div>
+        
+           
 
         </main>
         <footer>
