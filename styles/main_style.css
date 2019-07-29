@@ -69,7 +69,7 @@ input[type=email]:focus {
 }
 
 body {
-    font-family: cursive;
+    font-family: "Comic Sans MS", cursive;
     background-image: url("../images/diagmonds-blue.png");
     color: #ffffff;
     min-width: 1080px;
