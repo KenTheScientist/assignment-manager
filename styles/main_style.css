@@ -228,13 +228,13 @@ header {
 
 #header-band {
     background-color: #1b1464;
-    height: 108px;
+    height: 0px;
 
 
 }
 
 #header-text {
-    text-align: right;
+    text-align: left;
     max-width: 1060px;
     margin-top: -105px;
 }
@@ -273,7 +273,7 @@ nav {
 nav ul {
     list-style-type: none;
     margin-left: 30px;
-    width: 150px;
+    width: 0px;
 }
 
 nav li {
