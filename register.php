@@ -2,11 +2,11 @@
 // Start the session
 session_start();
 // Initialize session variables
-if (!isset($_SESSION['gamer'])){
-$_SESSION['gamer'] = 1;
+if (!isset($_SESSION['student'])){
+$_SESSION['student'] = 1;
 }
-if (!isset($_SESSION['duplicate_gamer'])) {
-    $_SESSION['duplicate_gamer'] = 'no';
+if (!isset($_SESSION['duplicate_student'])) {
+    $_SESSION['duplicate_student'] = 'no';
 }
 // Get the Heroku database
 require_once "db_connect.php";
@@ -21,18 +21,18 @@ Author: Nikkala Thomson
 <html lang="en-us">
 
 <head>
-    <?php $ROOT = '../';
-    include '../modules/head.php'; ?>
+    <?php $ROOT = '';
+    include 'modules/head.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/register.js"></script>
-    <title>The Board Game Whisperer | Register</title>
+    <title>Homework Manager</title>
 </head>
 
 <body>
     <header>
         <div id="header-band"></div>
         <div id="header-text" class="center-block">
-            <h1>New Account Registration</h1>
+            <h1>Homework Manager</h1>
         </div>
     </header>
     <div class=center-block>
@@ -42,7 +42,7 @@ Author: Nikkala Thomson
                 <li><a href="login.php">Login</a></li>
                 <li id="active-nav"><a href="register.php">Register<img src="../images/yellow-arrow.png" alt=""></a></li>
                 <li><a href="edit_profile.php">Profile</a></li>
-                <li><a href="games.php">Get Games</a></li>
+                
             </ul>
         </nav>
         <main>
