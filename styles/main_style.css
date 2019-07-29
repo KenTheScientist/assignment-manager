@@ -222,7 +222,7 @@ a:active {
 /******* Header Styles ********/
 
 header {
-    margin-top: 60px;
+    margin-top: 0px;
     margin-bottom: 50px;
 }
 
@@ -235,7 +235,7 @@ header {
 
 #header-text {
     text-align: right;
-    max-width: 1060px;
+    max-width: 30px;
     margin-top: -105px;
 }
 
