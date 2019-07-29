@@ -2,8 +2,8 @@
 // Start the session
 session_start();
 // Initialize session variables
-if (!isset($_SESSION['gamer'])) {
-    $_SESSION['gamer'] = 1;
+if (!isset($_SESSION['student'])) {
+    $_SESSION['student'] = 1;
 }
 if (!isset($_SESSION['error'])) {
     $_SESSION['error']='';
@@ -18,50 +18,50 @@ error_reporting(E_ALL);
 ?>
 <!DOCTYPE html>
 <!--
-This is the edit user profile page for the Board Game Whisperer
-Author: Nikkala Thomson
+Homework Manager
+Author: Kenneth Thomson
 -->
 
 <html lang="en-us">
 
 <head>
-    <?php $ROOT = '../';
-    include '../modules/head.php'; ?>
+    <?php $ROOT = '';
+    include 'modules/head.php'; ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/register.js"></script>
-    <title>The Board Game Whisperer | Edit Profile</title>
+    <title>Homework Manager</title>
 </head>
 
 <body>
     <header>
         <div id="header-band"></div>
         <div id="header-text" class="center-block">
-            <h1>Edit User Profile</h1>
+            <h1>Homework Manager</h1>
         </div>
     </header>
     <div class=center-block>
         <nav>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php">Tasks</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
                 <li id="active-nav"><a href="login.php">Profile<img src="../images/yellow-arrow.png" alt=""></a></li>
-                <li><a href="games.php">Get Games</a></li>
+                
             </ul>
         </nav>
         <main>
             <section class="wide-section">
                 <?php
-                    $query = 'SELECT * FROM gamer g WHERE g.gamer = ' . $_SESSION["gamer"];
+                    $query = 'SELECT * FROM student g WHERE g.student = ' . $_SESSION["student"];
                     $statement = $db->prepare($query);
                     $statement->execute();   
-                    $gamer_data = $statement->fetch(PDO::FETCH_ASSOC);
+                    $student_data = $statement->fetch(PDO::FETCH_ASSOC);
                     // sanitize here for safe display
-                    $display_name_safe = htmlspecialchars($gamer_data['display_name']);
-                    $email_safe = htmlspecialchars($gamer_data['email']);
+                    $display_name_safe = htmlspecialchars($student_data['display_name']);
+                    $email_safe = htmlspecialchars($student_data['email']);
                 
                 // Redirect to login page if logged in as Guest
-                   if ($gamer_data['gamer']==1) {
+                   if ($student_data['student']==1) {
                     header("Location: login.php");
                     exit();
                    }
