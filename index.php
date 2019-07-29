@@ -16,7 +16,7 @@ Author: Nikkala Thomson
 <html lang="en-us">
 
 <head>
-    <?php $ROOT = '.';
+    <?php $ROOT = '';
     include 'modules/head.php'; ?>
     <title>The Board Game Whisperer</title>
 </head>
