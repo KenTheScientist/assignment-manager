@@ -16,8 +16,8 @@ Author: Nikkala Thomson
 <html lang="en-us">
 
 <head>
-    <?php $ROOT = '../';
-    include '../modules/head.php'; ?>
+    <?php $ROOT = '.';
+    include 'modules/head.php'; ?>
     <title>The Board Game Whisperer</title>
 </head>
 
@@ -62,7 +62,7 @@ Author: Nikkala Thomson
 
         </main>
         <footer>
-            <?php include("../modules/footer.php"); ?>
+            <?php include("modules/footer.php"); ?>
         </footer>
     </div>
 </body>
