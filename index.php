@@ -30,10 +30,10 @@ Author: Ken
     <div class=center-block>
         <nav>
             <ul>
-                <li id="active-nav"><a href="index.php" class = "button">Tasks</a></li>
-                <li><a href="login.php" class = "button">Login</a></li>
-                <li><a href="register.php" class = "button">Register</a></li>
-                <li><a href="edit_profile.php" class = "button">Profile</a></li>
+                <li id="active-nav"><a href="index.php">Tasks</a></li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="edit_profile.php">Profile</a></li>
             </ul>
         </nav>
         <main>
