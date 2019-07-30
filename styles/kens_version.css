@@ -8,11 +8,12 @@
 #header-band {
     background-color: #000000;
     height: 108px;
-
+	position:fixed
 
 }
 
 h1 {
     position:fixed
+	color: #ffffff
 }
 
