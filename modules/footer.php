@@ -1,7 +1,7 @@
 <div class="center-block">
     <hr>
 </div>
-<div class="center-block">
+<div class="foot">
     
         Copyright &copy; 2019
         
