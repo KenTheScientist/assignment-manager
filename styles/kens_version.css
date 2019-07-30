@@ -1,2 +1,35 @@
 
 
+header {
+
+    
+    border-bottom: 6px solid white;
+    background-color: black;
+    height: 90px;
+    
+}
+
+#header-text{
+    color: white;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    color: black;
+    /*white border */
+    text-shadow:  -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    font-size: 2em;
+}
+
+body {
+    
+    background-color: black;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+ul {
+
+    color: white;
+}

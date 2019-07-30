@@ -3,7 +3,7 @@
 </div>
 <div class="center-block">
     <ul>
-        <li>Copyright &copy; </li>
-        <?php echo date("Y"); ?>
+        <li>Copyright &copy; 2019</li>
+        
     </ul>
 </div>

@@ -23,11 +23,9 @@ Author: Ken
 
 <body>
     <header>
-        <div id="header-band">
         <div id="header-text" class="center-block">
             <h1>Homework Manager</h1>
         </div>
-		</div>
     </header>
     <div class=center-block>
         <nav>
