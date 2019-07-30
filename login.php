@@ -38,7 +38,7 @@ Author: Ken Thomson
         <nav>
             <ul>
                 <li><a href="index.php">Tasks</a></li>
-                <li id="active-nav"><a href="login.php">Login<img src="../images/yellow-arrow.png" alt=""></a></li>
+                <li id="active-nav"><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="edit_profile.php">Profile</a></li>
                 

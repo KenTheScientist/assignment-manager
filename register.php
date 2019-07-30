@@ -40,7 +40,7 @@ Author: Nikkala Thomson
             <ul>
                 <li><a href="index.php">Tasks</a></li>
                 <li><a href="login.php">Login</a></li>
-                <li id="active-nav"><a href="register.php">Register<img src="../images/yellow-arrow.png" alt=""></a></li>
+                <li id="active-nav"><a href="register.php">Register</a></li>
                 <li><a href="edit_profile.php">Profile</a></li>
                 
             </ul>

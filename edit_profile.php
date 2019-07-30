@@ -45,7 +45,7 @@ Author: Kenneth Thomson
                 <li><a href="index.php">Tasks</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
-                <li id="active-nav"><a href="login.php">Profile<img src="../images/yellow-arrow.png" alt=""></a></li>
+                <li id="active-nav"><a href="login.php">Profile</a></li>
                 
             </ul>
         </nav>
