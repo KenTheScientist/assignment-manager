@@ -2,8 +2,8 @@
     <hr>
 </div>
 <div class="center-block">
-    <ul>
-        <li>Copyright &copy; 2019</li>
+    
+        Copyright &copy; 2019
         
-    </ul>
+    
 </div>

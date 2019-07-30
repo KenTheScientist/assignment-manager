@@ -1,5 +1,6 @@
 
 
+
 header {
 
     
@@ -18,6 +19,7 @@ header {
     /*white border */
     text-shadow:  -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
     font-size: 2em;
+    
 }
 
 body {
@@ -30,6 +32,10 @@ h1 {
 }
 
 ul {
-
+    
     color: white;
+}
+
+#active-nav {
+    font-weight: 700;
 }
