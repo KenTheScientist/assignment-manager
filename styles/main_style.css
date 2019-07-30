@@ -127,7 +127,7 @@ ol li {
 
 .center-block {
     margin: auto;
-    min-width: 0px; /*originally 960*/
+    min-width: 960px; /*originally 960*/
     max-width: 1060px;
     text-align: right;
 }
@@ -224,6 +224,7 @@ a:active {
 header {
     margin-top: 0px;
     margin-bottom: 50px;
+	right
 }
 
 #header-band {
