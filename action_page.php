@@ -86,13 +86,13 @@ if (isset($_POST['p_display_name'])){
             }
             $statement->execute(); 
            // Redirect to games page
-            header("Location: games.php");
+            header("Location: index.php");
             exit();   
            
             } else {
               // If password is incorrect, redirect to update page 
             $_SESSION['error'] = '<p>Old password incorrect.</p><br>';
-            header("Location: edit_profile.php");
+            header("Location: index.php");
             exit();  
             }
     }   
@@ -119,7 +119,7 @@ if (isset($_POST['l_username'])){
         // Update session variables
         $_SESSION["student"] = $student_info[0]['student'];
         // Redirect to games page
-        header("Location: games.php");
+        header("Location: index.php");
         exit();
         } else {
             // Redirect to login page
