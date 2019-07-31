@@ -30,10 +30,14 @@ Author: Ken
     <div class=center-block>
         <nav>
             <ul>
-                <li id="active-nav"><a href="index.php">Tasks</a></li>
+                <!--<li id="active-nav"><a href="index.php">Tasks</a></li>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
-                <li><a href="edit_profile.php">Profile</a></li>
+                <li><a href="edit_profile.php">Profile</a></li>-->
+				<li><button type = "button" onclick = "index.php">Tasks</button></li>
+				<li><button type = "button" onclick = "login.php">Login</button></li>
+				<li><button type = "button" onclick = "register.php">Register</button></li>
+				<li><button type = "button" onclick = "edit_profile.php">Profile</button></li>
             </ul>
         </nav>
         <main>
