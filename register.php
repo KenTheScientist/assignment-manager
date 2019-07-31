@@ -38,10 +38,10 @@ Author: Nikkala Thomson
     <div class=center-block>
         <nav>
             <ul>
-                <li><a href="index.php">Tasks</a></li>
-                <li><a href="login.php">Login</a></li>
-                <li id="active-nav"><a href="register.php">Register</a></li>
-                <li><a href="edit_profile.php">Profile</a></li>
+                <li><a href="index.php"><button type = "button">Tasks</button></a></li>
+				<li><a href="login.php"><button type = "button">Login</button></a></li>
+				<li><a href="register.php"><button type = "button">Register</button></a></li>
+				<li><a href="edit_profile.php"><button type = "button">Profile</button></a></li>
                 
             </ul>
         </nav>

@@ -2,14 +2,14 @@
 // Start the session
 session_start();
 // Initialize session variables
-if (!isset($_SESSION['gamer'])) {
-$_SESSION['gamer'] = 1;
+if (!isset($_SESSION['student'])) {
+$_SESSION['student'] = 1;
 }
 if (!isset($_SESSION['error'])) {
     $_SESSION['error']='';
 }
-if (!isset($_SESSION['duplicate_gamer'])) {
-    $_SESSION['duplicate_gamer'] = 'no';
+if (!isset($_SESSION['duplicate_student'])) {
+    $_SESSION['duplicate_student'] = 'no';
 }
 if (!isset($_SESSION['best_game'])) {
     $_SESSION['best_game'] = 0;
@@ -36,26 +36,26 @@ if (isset($_POST['r_email'])){
    $password = htmlspecialchars($_POST['r_password']);
    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
    
-      // Check for duplicate gamer username
-    if ($_SESSION['duplicate_gamer']=='yes'){
+      // Check for duplicate student username
+    if ($_SESSION['duplicate_student']=='yes'){
         // Send back to registration page
         header("Location: register.php");
         exit();
     } else {
     
-    $statement = $db->prepare('INSERT INTO gamer (username, display_name, email, hashed_password) VALUES (:username, :display_name, :email, :hashed_password);');
+    $statement = $db->prepare('INSERT INTO student (username, display_name, email, hashed_password) VALUES (:username, :display_name, :email, :hashed_password);');
     $statement->bindValue(':username', $username, PDO::PARAM_STR);
     $statement->bindValue(':display_name', $display_name, PDO::PARAM_STR);
     $statement->bindValue(':email', $email, PDO::PARAM_STR);
     $statement->bindValue(':hashed_password', $hashed_password, PDO::PARAM_STR);
     $statement->execute();
-    $_SESSION['gamer'] = $db->lastInsertId();
-    $gamer = $_SESSION['gamer'];
+    $_SESSION['student'] = $db->lastInsertId();
+    $student = $_SESSION['student'];
     
-    $statement2 = $db->prepare('INSERT INTO preference(gamer, preferences) 
-                               VALUES (:gamer, :preferences);');
+    $statement2 = $db->prepare('INSERT INTO preference(student, preferences) 
+                               VALUES (:student, :preferences);');
     $preferences = '{ "min_players":1, "max_players":1, "min_playtime":1, "max_playtime":15, "themes":[], "min_weight":1.0, "max_weight":1.5, "mechanisms":[]}';
-    $statement2->bindValue(':gamer', $gamer, PDO::PARAM_INT);
+    $statement2->bindValue(':student', $student, PDO::PARAM_INT);
     $statement2->bindValue(':preferences', $preferences, PDO::PARAM_STR);
     $statement2->execute();
     
@@ -72,27 +72,27 @@ if (isset($_POST['p_display_name'])){
     $old_password = htmlspecialchars($_POST['p_old_password']);
     $new_password = htmlspecialchars($_POST['p_new_password']);
     $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
-    $gamer = (int)$_SESSION['gamer'];
+    $student = (int)$_SESSION['student'];
 
     // Check for correct old password    
-   $statement = $db->prepare("SELECT * FROM gamer WHERE gamer = $gamer");
+   $statement = $db->prepare("SELECT * FROM student WHERE student = $student");
     $statement->execute();
-    $gamer_info = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $student_info = $statement->fetchAll(PDO::FETCH_ASSOC);
        
-    $hashed_old_password = $gamer_info[0]['hashed_password'];
+    $hashed_old_password = $student_info[0]['hashed_password'];
         if (password_verify($old_password, $hashed_old_password)) {
             // If password is correct, update user profile
             if (!empty($new_password)) { 
                 $hashed_new_password = password_hash($new_password, PASSWORD_DEFAULT);
-               $statement = $db->prepare('UPDATE gamer SET display_name = :display_name, email = :email, hashed_password = :hashed_password WHERE gamer = :gamer;');
-                $statement->bindvalue(':gamer', $gamer, PDO::PARAM_INT);
+               $statement = $db->prepare('UPDATE student SET display_name = :display_name, email = :email, hashed_password = :hashed_password WHERE student = :student;');
+                $statement->bindvalue(':student', $student, PDO::PARAM_INT);
                 $statement->bindValue(':display_name', $display_name, PDO::PARAM_STR);
                 $statement->bindValue(':email', $email, PDO::PARAM_STR);
                 $statement ->bindValue(':hashed_password', $hashed_new_password, PDO::PARAM_STR);
            
             } else {
-                $statement = $db->prepare('UPDATE gamer SET display_name = :display_name, email = :email WHERE gamer = :gamer;');
-                $statement->bindvalue(':gamer', $gamer, PDO::PARAM_INT);
+                $statement = $db->prepare('UPDATE student SET display_name = :display_name, email = :email WHERE student = :student;');
+                $statement->bindvalue(':student', $student, PDO::PARAM_INT);
                 $statement->bindValue(':display_name', $display_name, PDO::PARAM_STR);
                 $statement->bindValue(':email', $email, PDO::PARAM_STR);
            
@@ -114,23 +114,23 @@ if (isset($_POST['p_display_name'])){
 if (isset($_POST['l_username'])){
     $username = htmlspecialchars($_POST['l_username']); 
     $password = htmlspecialchars($_POST['l_password']);
-    $statement = $db->prepare("SELECT * FROM gamer WHERE username = :username");
+    $statement = $db->prepare("SELECT * FROM student WHERE username = :username");
     $statement->bindValue(':username', $username, PDO::PARAM_STR);
     $statement->execute();
-    $gamer_info = $statement->fetchAll(PDO::FETCH_ASSOC);
-    $gamer_name = $gamer_info[0]['username'];
+    $student_info = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $student_name = $student_info[0]['username'];
                 
 // Check if username exists, if yes then verify password
-    if (empty($gamer_name)) {
+    if (empty($student_name)) {
         // Redirect to login page
         $_SESSION['error'] = '<p>Username or password incorrect.</p><br>';
         header("Location: login.php");
         exit();
     } else {
-        $hashed_password = $gamer_info[0]['hashed_password'];
+        $hashed_password = $student_info[0]['hashed_password'];
         if(password_verify($password, $hashed_password)){
         // Update session variables
-        $_SESSION["gamer"] = $gamer_info[0]['gamer'];
+        $_SESSION["student"] = $student_info[0]['student'];
         // Redirect to games page
         header("Location: games.php");
         exit();
@@ -158,7 +158,7 @@ if (isset($_POST['go'])) {
         else $themes = [];
     if (isset($_POST['mechanisms'])) $mechanisms = ($_POST['mechanisms']);
         else $mechanisms = [];
-    $gamer = (int)$_SESSION['gamer'];
+    $student = (int)$_SESSION['student'];
    
      
     // create json preferences statement for UPDATE
@@ -184,7 +184,7 @@ if (isset($_POST['go'])) {
     }
     $prefs_json = $prefs_json . ']}';
     // Update preferences
-    $statement = $db->prepare("UPDATE preference SET preferences = '$prefs_json' WHERE gamer = $gamer");
+    $statement = $db->prepare("UPDATE preference SET preferences = '$prefs_json' WHERE student = $student");
     $statement->execute(); 
     
     // Now to get game recommendation from algorithm
@@ -256,9 +256,9 @@ if (isset($_POST['go'])) {
         $game_score = $game_score + $score_from_mechanisms;   
         
         if ($game_score >= $best_game_score) {
-            // check if this game has already been recommended to this gamer
+            // check if this game has already been recommended to this student
             $already_recommended = 'false';
-            $statement3 = $db->prepare("SELECT * FROM recommendation WHERE gamer = $gamer");
+            $statement3 = $db->prepare("SELECT * FROM recommendation WHERE student = $student");
             $statement3->execute();
             $recommendations = $statement3->fetchAll(PDO::FETCH_ASSOC);
             foreach ($recommendations AS $recommendation) {
@@ -276,8 +276,8 @@ if (isset($_POST['go'])) {
     }
     
     // If not logged in as Guest, record final recommendation 
-    if (($gamer!=1) AND ($best_board_game>0)) {
-        $statement4 = $db->prepare("INSERT INTO recommendation (gamer, board_game) VALUES ($gamer, $best_board_game);");
+    if (($student!=1) AND ($best_board_game>0)) {
+        $statement4 = $db->prepare("INSERT INTO recommendation (student, board_game) VALUES ($student, $best_board_game);");
         $statement4->execute();    
         }
     // redirect to recommendation page
