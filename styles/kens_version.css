@@ -4,7 +4,7 @@ header {
     border-bottom: 6px solid white;
     background-color: black;
     height: 90px;
-    
+    margin: 0px 0px;
 }
 
 #header-text{
@@ -20,36 +20,49 @@ header {
 }
 
 body {
-    
+    margin-left: 0px;
     background-color: black;
 }
 
 h1 {
     margin-top: 0;
 }
-/*
+
 ul {
     padding-top: 0px;
     margin-top: 0px;
     
-    color: white;
-    width: 200px;
+    
     list-style: none;
     margin-left: 0px;
     padding-left: 0px;
 }
 
-li {
-    width: 200px;
-    height: 100px;
-    border-style: solid;
-    border-width: 5px;
-    padding-top: 0px;
-    background-color: grey;
+
+button {
+  background-color: #000000;
+  padding-top: 0px;
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  width: 180px;
+  height: 60px;
+  margin-left: 0px;
+  padding-left: 0px;
+  
+  border-width: 4px;
+  border-color: white;
+
 }
-*/
 #active-nav {
     font-weight: 700;
+}
+
+button:hover {
+
+    background-color: #3a3a3a;
 }
 
 A {
@@ -58,4 +71,5 @@ A {
 
 .foot {
 	color: white;
+
 }

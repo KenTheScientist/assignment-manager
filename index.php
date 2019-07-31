@@ -34,10 +34,12 @@ Author: Ken
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="edit_profile.php">Profile</a></li>-->
-				<li><button type = "button" onclick = "index.php">Tasks</button></li>
-				<li><button type = "button" onclick = "login.php">Login</button></li>
-				<li><button type = "button" onclick = "register.php">Register</button></li>
-				<li><button type = "button" onclick = "edit_profile.php">Profile</button></li>
+				<form>
+				<li><button type = "button" formaction= "index.php">Tasks</button></li>
+				<li><button type = "button" formaction= "login.php">Login</button></li>
+				<li><button type = "button" formaction= "register.php">Register</button></li>
+				<li><button type = "button" formaction= "edit_profile.php">Profile</button></li>
+				</form>
             </ul>
         </nav>
         <main>
