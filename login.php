@@ -62,9 +62,10 @@ Author: Ken Thomson
                 <form action="action_page.php" method="post">
                     <label for="username" class="label_long"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="l_username" required /><br>
+					<br>
                     <label for="password" class="label_long"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="l_password" required /><br>
-                    <button type="submit" class="submit_btn" id = "in_main">LOGIN</button>
+                    <button type="submit" class="submit_btn" id = "in_main">Login</button>
                 </form>
             </section>
         </main>

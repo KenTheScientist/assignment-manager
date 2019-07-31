@@ -72,7 +72,8 @@ A {
 
 .foot {
 	color: white;
-
+	position = relative;
+	left: 20px;
 }
 
 form {
@@ -92,10 +93,29 @@ main {
   text-align: center;
   font-size: 1em;
   cursor: pointer;
-  width: 90px;
-  height: 45px;
+  width: 100px;
+  height: 50px;
   margin-top: 5px;
   padding-left: 0px;
   border-width: 4px;
   border-color: white;
+}
+
+#other_link:link {
+  color: blue;
+}
+
+/* visited link */
+#other_link:visited {
+  color: blue;
+}
+
+/* mouse over link */
+#other_link:hover {
+  color: yellow;
+}
+
+/* selected link */
+#other_link:active {
+  color: orange;
 }
