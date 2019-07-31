@@ -53,9 +53,7 @@ Author: Ken
            
 
         </main>
-        <footer>
-            <?php include("modules/footer.php"); ?>
-        </footer>
+        
     </div>
 </body>
 

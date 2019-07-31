@@ -69,9 +69,7 @@ Author: Nikkala Thomson
             </section>
         </main>
 
-        <footer>
-            <?php include("modules/footer.php"); ?>
-        </footer>
+        
     </div>
 </body>
 
