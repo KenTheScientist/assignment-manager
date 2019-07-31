@@ -35,10 +35,10 @@ Author: Ken
                 <li><a href="register.php">Register</a></li>
                 <li><a href="edit_profile.php">Profile</a></li>-->
 				
-				<li><form action= "index.php"><button type = "button" >Tasks</button></form></li>
-				<li><form action= "login.php"><button type = "button" >Login</button></form></li>
-				<li><form action= "register.php"><button type = "button" >Register</button></form></li>
-				<li><form action= "edit_profile.php"><button type = "button" >Profile</button></form></li>
+				<li><a href="index.php"><button type = "button">Tasks</button></a></li>
+				<li><a href="login.php"><button type = "button">Login</button></a></li>
+				<li><a href="register.php"><button type = "button">Register</button></a></li>
+				<li><a href="edit_profile.php"><button type = "button">Profile</button></a></li>
 				
             </ul>
         </nav>
