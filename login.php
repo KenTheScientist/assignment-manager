@@ -65,6 +65,7 @@ Author: Ken Thomson
 					<br>
                     <label for="password" class="label_long"><b>Password</b></label>
                     <input type="password" placeholder="Enter Password" name="l_password" required /><br>
+					<br>
                     <button type="submit" class="submit_btn" id = "in_main">Login</button>
                 </form>
             </section>
