@@ -44,11 +44,13 @@ Author: Ken
         </nav>
         <main>
 			<p>
+			<br>
 				TASKS:
-			</p>
-           <!--
+				<!--
 			This is where we put tasks, input tasks, etc.
 		   -->
+			</p>
+           
 
         </main>
         <footer>
