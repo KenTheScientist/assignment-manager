@@ -77,3 +77,12 @@ A {
 form {
 	color: white;
 }
+
+.wide_section {
+	position: relative;
+	left: 100px;
+}
+
+#active-nav {
+	background-color: #3a3a3a;
+}
