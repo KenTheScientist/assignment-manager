@@ -52,6 +52,16 @@ if (isset($_POST['r_email'])){
     }
 }
 
+if (isset($_POST['r_name'])){
+	$name = htmlspecialchars($_POST['r_name']);
+	$class = htmlspecialchars($_POST['r_class']);
+	$m = htmlspecialchars($_POST['r_m']);
+	$d = htmlspecialchars($_POST['r_d']);
+	$y = htmlspecialchars($_POST['r_y']);
+	$date = $m . "/" . $d . "/" . $y . " 0:0:0";
+	$date = strtotime($date);
+}
+
 // If profile update submitted
 if (isset($_POST['p_display_name'])){
     $display_name = htmlspecialchars($_POST['p_display_name']);    

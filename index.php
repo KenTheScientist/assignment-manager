@@ -45,9 +45,35 @@ Author: Ken
         <main>
 			<p>
 			<br>
-				TASKS:
+				Hello, <?php
+                    $student = $_SESSION['student'];
+                    $query = "SELECT display_name FROM student g WHERE g.student = $student";
+                    $statement = $db->prepare($query);
+                    $statement->execute();   
+                    $student_data = $statement->fetch(PDO::FETCH_ASSOC);
+                    echo $student_data['display_name'];
+                ?>!
+				<br>
+				Your Tasks:
+				<br>
+				<br>
+				<form id="myForm" action="action_page.php" method="post">
+					Input Task: 
+					<input type="text" placeholder="NAME" name="r_name" required />
+					<input type="text" placeholder="MONTH" name="r_m" required />
+					<input type="text" placeholder="DAY" name="r_d" required />
+					<input type="text" placeholder="YEAR" name="r_y" required />
+					<input type="text" placeholder="CLASS" name="r_class" required />
+					<button type="submit" class="submit_btn" id = "in_main">Make</button><br>
+				</form>
 				<!--
 			This is where we put tasks, input tasks, etc.
+			NAME
+			DATE:
+			MONTH
+			DAY
+			YEAR
+			CLASS
 		   -->
 			</p>
            
