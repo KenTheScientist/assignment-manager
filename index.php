@@ -45,20 +45,23 @@ Author: Ken
         <main>
 			<p>
 			<br>
-				Hello, <?php
-                    $student = $_SESSION['student'];
-                    $query = "SELECT display_name FROM student g WHERE g.student = $student";
-                    $statement = $db->prepare($query);
-                    $statement->execute();   
-                    $student_data = $statement->fetch(PDO::FETCH_ASSOC);
-                    echo $student_data['display_name'];
-                ?>!
-				<br>
+				
+				<?php
+                    //$student = $_SESSION['student'];
+                    //$query = "SELECT display_name FROM student g WHERE g.student = $student";
+                    //$statement = $db->prepare($query);
+                    //$statement->execute();   
+                    //$student_data = $statement->fetch(PDO::FETCH_ASSOC);
+                    //echo $student_data['display_name'];
+                ?>
+				
+				
 				Your Tasks:
 				<br>
+				Input Task: 
 				<br>
 				<form id="myForm" action="action_page.php" method="post">
-					Input Task: 
+					
 					<input type="text" placeholder="NAME" name="r_name" required />
 					<input type="text" placeholder="MONTH" name="r_m" required />
 					<input type="text" placeholder="DAY" name="r_d" required />
