@@ -34,12 +34,12 @@ Author: Ken
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="edit_profile.php">Profile</a></li>-->
-				<form>
-				<li><button type = "button" formaction= "index.php">Tasks</button></li>
-				<li><button type = "button" formaction= "login.php">Login</button></li>
-				<li><button type = "button" formaction= "register.php">Register</button></li>
-				<li><button type = "button" formaction= "edit_profile.php">Profile</button></li>
-				</form>
+				
+				<li><form action= "index.php"><button type = "button" >Tasks</button></form></li>
+				<li><form action= "login.php"><button type = "button" >Login</button></form></li>
+				<li><form action= "register.php"><button type = "button" >Register</button></form></li>
+				<li><form action= "edit_profile.php"><button type = "button" >Profile</button></form></li>
+				
             </ul>
         </nav>
         <main>
