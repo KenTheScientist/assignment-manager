@@ -81,7 +81,7 @@ Author: Kenneth Thomson
                     <input type="password" placeholder="Enter Old Password" name="p_old_password" required /><br>
                     <label for="new_password" class="label_long"><b>Old or New Password</b></label>
                     <input type="password" id="field_pwd1" placeholder="Re-enter Old Password or enter New Password (6+ chars, UPPER/lower + num)" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." name="p_new_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '');" required /><br>
-                    <button type="submit" class="submit_btn" onclick="check_password()">UPDATE</button>
+                    <button type="submit" class="submit_btn" id = "in_main" onclick="check_password()">UPDATE</button>
                 </form>
 
 

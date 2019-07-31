@@ -63,7 +63,7 @@ Author: Nikkala Thomson
                     <label for="password2" class="label_long"><b>Repeat Password</b></label>
                     <input type="password" id="field_pwd2" title="Please enter the same password as above" placeholder="Confirm Password" name="r_password2" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="pwd2" onchange="
   this.setCustomValidity(this.validity.patternMismatch ? this.title : '');" /><br>
-                    <button type="submit" class="submit_btn" onclick="check_password()">REGISTER</button><br>
+                    <button type="submit" class="submit_btn" onclick="check_password()" id = "in_main">REGISTER</button><br>
                     <p>Already have an account? <a href="login.php">Log in</a>.</p><br>
                 </form>
             </section>

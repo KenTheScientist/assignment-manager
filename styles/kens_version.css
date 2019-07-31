@@ -51,13 +51,13 @@ button {
   height: 60px;
   margin-left: 0px;
   padding-left: 0px;
-  
   border-width: 4px;
   border-color: white;
-
+  
 }
 #active-nav {
     font-weight: 700;
+	background-color: #3a3a3a;
 }
 
 button:hover {
@@ -78,11 +78,23 @@ form {
 	color: white;
 }
 
-.wide_section {
+main {
 	position: relative;
-	left: 100px;
+	left: 200px;
+	bottom: 260px;
 }
 
-#active-nav {
-	background-color: #3a3a3a;
+#in_main {
+  background-color: #000000;
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  width: 90px;
+  height: 45px;
+  margin-top: 5px;
+  padding-left: 0px;
+  border-width: 4px;
+  border-color: white;
 }
