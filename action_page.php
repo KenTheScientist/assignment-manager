@@ -65,7 +65,7 @@ if (isset($_POST['r_name'])){
 	$statement->bindValue(':task_name', $name, PDO::PARAM_STR);
 	$statement->bindValue(':due_date', $date, PDO::PARAM_STR);
 	$statement->bindValue(':task_class', $class, PDO::PARAM_STR);
-	
+	$statement->execute();
 	
 	
 	header("Location: index.php");
