@@ -45,15 +45,14 @@ Author: Ken
         <main>
 			<p>
 			<br>
-				Welcome, 
-				<?php
+				<p> Welcome, <?php
                     $student = $_SESSION['student'];
                     $query = "SELECT display_name FROM student g WHERE g.student = $student";
                     $statement = $db->prepare($query);
                     $statement->execute();   
                     $student_data = $statement->fetch(PDO::FETCH_ASSOC);
                     echo $student_data['display_name'];
-                ?>
+                ?>!</p><br>
 				
 				You must be logged in to save your tasks!
 				<br>
