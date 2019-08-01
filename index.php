@@ -5,7 +5,9 @@ session_start();
 if (!isset($_SESSION['student'])){
 $_SESSION['student'] = 1;}
 
-
+// Get the Heroku database
+require_once "db_connect.php";
+$db = get_db();
 ?>
 <!DOCTYPE html>
 <!--
