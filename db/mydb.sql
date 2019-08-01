@@ -69,7 +69,7 @@ CREATE TABLE public.task (
   task_name VARCHAR(100) NOT NULL,
   due_date DATE NOT NULL,
   task_class VARCHAR(100) NOT NULL
-
+  
 );
 
 CREATE TABLE public.assignment (

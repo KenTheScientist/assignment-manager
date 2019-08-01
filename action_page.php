@@ -60,6 +60,16 @@ if (isset($_POST['r_name'])){
 	$y = htmlspecialchars($_POST['r_y']);
 	$date = $m . "/" . $d . "/" . $y . " 0:0:0";
 	$date = strtotime($date);
+	
+	$statement = $db->prepare('INSERT INTO task (task_name, due_date, task_class) VALUES (:task_name, :due_date, :task_class);');
+	$statement->bindValue(':task_name', $name, PDO::PARAM_STR);
+	$statement->bindValue(':due_date', $date, PDO::PARAM_STR);
+	$statement->bindValue(':task_class', $class, PDO::PARAM_STR);
+	$
+	$_SESSION['task'] = $db->lastInsertId();
+	$task = $_SESSION['task']
+	header("Location: index.php");
+    exit();
 }
 
 // If profile update submitted
