@@ -60,8 +60,8 @@ Author: Ken
 				<br>
 				<br>
 				 
-				Input Task:<form id="myForm" action="action_page.php" method="post">
-					<input type="text" placeholder="NAME" name="r_name" required />
+				<form id="myForm" action="action_page.php" method="post">
+					Input Task:<input type="text" placeholder="NAME" name="r_name" required />
 					<input type="text" placeholder="MONTH" name="r_m" required />
 					<input type="text" placeholder="DAY" name="r_d" required />
 					<input type="text" placeholder="YEAR" name="r_y" required />
