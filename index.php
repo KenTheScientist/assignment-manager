@@ -54,9 +54,11 @@ Author: Ken
                     $statement->execute();   
                     $student_data = $statement->fetch(PDO::FETCH_ASSOC);
                     echo $student_data['display_name'];
-                ?>!</p><br>
-				
-				You must be logged in to save your tasks!
+                ?>!</p><br><br>
+				<?php if($student_data['student']==1) : ?>
+				You must be logged in to create tasks!
+				<?php else : ?>
+				<br>
 				<br>
 				Your Tasks:
 				<br>
@@ -68,6 +70,8 @@ Author: Ken
 					<input type="text" placeholder="CLASS" name="r_class" required />
 					<button type="submit" class="submit_btn" id = "plus_sign">+</button><br>
 				</form>
+				<?php endif; ?>
+				
 				
 				<!--
 			This is where we put tasks, input tasks, etc.
