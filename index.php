@@ -58,8 +58,8 @@ Author: Ken
 				
 				Your Tasks:
 				<br>
-				Input Task: 
 				<br>
+				Input Task: 
 				<form id="myForm" action="action_page.php" method="post">
 					
 					<input type="text" placeholder="NAME" name="r_name" required />
@@ -67,7 +67,7 @@ Author: Ken
 					<input type="text" placeholder="DAY" name="r_d" required />
 					<input type="text" placeholder="YEAR" name="r_y" required />
 					<input type="text" placeholder="CLASS" name="r_class" required />
-					<button type="submit" class="submit_btn" id = "in_main">Make</button><br>
+					<button type="submit" class="submit_btn" id = "in_main">+</button><br>
 				</form>
 				<!--
 			This is where we put tasks, input tasks, etc.
