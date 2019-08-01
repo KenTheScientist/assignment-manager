@@ -55,11 +55,7 @@ if (isset($_POST['r_email'])){
 if (isset($_POST['r_name'])){
 	$name = htmlspecialchars($_POST['r_name']);
 	$class = htmlspecialchars($_POST['r_class']);
-	$m = htmlspecialchars($_POST['r_m']);
-	$d = htmlspecialchars($_POST['r_d']);
-	$y = htmlspecialchars($_POST['r_y']);
-	$date = $m . "/" . $d . "/" . $y . " 0:0:0";
-	$date = strtotime($date);
+	$date = htmlspecialchars($_POST['r_date']);
 	
 	$statement = $db->prepare('INSERT INTO task (task_name, due_date, task_class) VALUES (:task_name, :due_date, :task_class);');
 	$statement->bindValue(':task_name', $name, PDO::PARAM_STR);
