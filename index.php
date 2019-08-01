@@ -27,6 +27,7 @@ Author: Ken
     <header>
         <div id="header-text" class="center-block">
             <h1>Homework Manager</h1>
+			By Kenneth Thomson
         </div>
     </header>
     <div class=center-block>
@@ -45,6 +46,18 @@ Author: Ken
             </ul>
         </nav>
         <main>
+				<?php
+                    $query = 'SELECT * FROM student g WHERE g.student = ' . $_SESSION["student"];
+                    $statement = $db->prepare($query);
+                    $statement->execute();   
+                    $student_data = $statement->fetch(PDO::FETCH_ASSOC);
+                
+                // Redirect to login page if logged in as Guest
+                   if ($student_data['student']==1) {
+                    header("Location: login.php");
+                    exit();
+                   }
+                ?>
 			<p>
 			<br>
 				<p> Welcome, <?php
@@ -54,41 +67,18 @@ Author: Ken
                     $statement->execute();   
                     $student_data = $statement->fetch(PDO::FETCH_ASSOC);
                     echo $student_data['display_name'];
-                ?>!</p><br>
-				<?php 
-					$student = $_SESSION['student'];
-                    $query = "SELECT display_name FROM student g WHERE g.student = $student";
-                    $statement = $db->prepare($query);
-                    $statement->execute();   
-                    $student_data = $statement->fetch(PDO::FETCH_ASSOC);
-				if($student_data['student']==1) : ?>
-				
-				You must be logged in to create tasks!
-				<?php else : ?>
+                ?>!</p>
 				<br>
-				
+				<br>
 				Your Tasks:
 				<br>
 				<br>
-				 
 				<form id="myForm" action="action_page.php" method="post">
 					Input Task: <input type="text" placeholder="NAME" name="r_name" required />
 					<input type="date" name="r_date" value="2019-08-2" min="2019-01-01" max="2022-1-1">
 					<input type="text" placeholder="CLASS" name="r_class" required />
 					<button type="submit" class="submit_btn" id = "plus_sign">+</button><br>
 				</form>
-				<?php endif; ?>
-				
-				
-				<!--
-			This is where we put tasks, input tasks, etc.
-			NAME
-			DATE:
-			MONTH
-			DAY
-			YEAR
-			CLASS
-		   -->
 			</p>
            
 
