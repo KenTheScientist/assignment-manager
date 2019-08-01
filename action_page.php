@@ -63,6 +63,13 @@ if (isset($_POST['r_name'])){
 	$statement->bindValue(':task_class', $class, PDO::PARAM_STR);
 	$statement->execute();
 	
+	// Insert student, task into assignment many many table
+	$student = $_SESSION['student'];
+	$task = $db->lastInsertId();
+	$statement2 = $db->prepare('INSERT INTO assignment (student, task) VALUES (:student, :task);');
+	$statement2->bindValue(':student', $student, PDO::PARAM_INT);
+	$statement2->bindValue(':task', $task, PDO::PARAM_INT);
+	$statement2->execute();
 	
 	header("Location: index.php");
     exit();
