@@ -66,8 +66,8 @@ if (isset($_POST['r_name'])){
 	$statement->bindValue(':due_date', $date, PDO::PARAM_STR);
 	$statement->bindValue(':task_class', $class, PDO::PARAM_STR);
 	
-	$_SESSION['task'] = $db->lastInsertId();
-	$task = $_SESSION['task'];
+	
+	
 	header("Location: index.php");
     exit();
 }
