@@ -76,7 +76,7 @@ Author: Ken
 				<br>
 				<form id="myForm" action="action_page.php" method="post">
 					Input Task: <input type="text" placeholder="NAME" name="r_name" required />
-					<input type="date" name="r_date" value="2019-08-2" min="2019-01-01" max="2022-1-1">
+					<input type="date" name="r_date" value="2019-08-01" min="2019-01-01" max="2022-01-01">
 					<input type="text" placeholder="CLASS" name="r_class" required />
 					<button type="submit" class="submit_btn" id = "plus_sign">+</button><br>
 				</form>

@@ -3,7 +3,7 @@ header {
     
     border-bottom: 6px solid white;
     background-color: black;
-    height: 90px;
+    height: 100px;
     margin: 0px 0px;
 }
 
@@ -11,23 +11,24 @@ header {
     
     position: relative;
     left: 10px;
-    top: 2px;
+    top: 0px;
 	
     color: black;
     /*white border */
-    text-shadow:  -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    text-shadow:  -2px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
     font-size: 2em;
     
 }
 
 #author{
 	position: relative;
-    left: 10px;
-    top: 5px;
-    color: black;
+    left: 15px;
+    top: -47px;
+    
+    color: white;
     /*white border */
-    text-shadow:  -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
-    font-size: 1em;
+    /*text-shadow:  -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;*/
+    font-size: 1.2em;
 }
 
 body {
