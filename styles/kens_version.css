@@ -8,15 +8,26 @@ header {
 }
 
 #header-text{
-    color: white;
+    
     position: relative;
     left: 10px;
-    top: 5px;
+    top: 2px;
+	
     color: black;
     /*white border */
     text-shadow:  -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
     font-size: 2em;
     
+}
+
+#author{
+	position: relative;
+    left: 10px;
+    top: 5px;
+    color: black;
+    /*white border */
+    text-shadow:  -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    font-size: 1em;
 }
 
 body {

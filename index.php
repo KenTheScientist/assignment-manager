@@ -27,8 +27,9 @@ Author: Ken
     <header>
         <div id="header-text" class="center-block">
             <h1>Homework Manager</h1>
-			By Kenneth Thomson
+			
         </div>
+		<p id="author">By Kenneth Thomson</p>
     </header>
     <div class=center-block>
         <nav>
