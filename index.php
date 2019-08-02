@@ -79,10 +79,7 @@ Author: Ken
 				$statement = $db->prepare($query);
                 $statement->execute();   
                 $assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
-				
-					
-
-					echo $query;
+				echo $assignment_data;
 				
 				?>
 				<br>
