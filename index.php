@@ -79,7 +79,7 @@ Author: Ken
 				$statement = $db->prepare($query);
                 $statement->execute();   
                 $assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
-				echo $assignment_data["task_name"][0];
+				echo $assignment_data["task_name"];
 				
 				?>
 				<br>
