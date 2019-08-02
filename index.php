@@ -71,15 +71,45 @@ Author: Ken
                 ?>!</p>
 				<br>
 				Your Tasks:
-				<br>
+				<br><br>
 				<!--DISPLAY TASKS HERE-->
 				<?php
 				$student = $_SESSION['student'];
-				$query = "SELECT * FROM assignment g WHERE g.student = $student";
+				$query = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student";
+				$result = pg_query($query);
 				$statement = $db->prepare($query);
                 $statement->execute();   
                 $assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
-				echo $assignment_data['task'];
+				
+				$i = 0;
+				echo '<table><tr>';
+				while ($i < pg_num_fields($query))
+				{
+					$fieldName = pg_field_name($result, $i);
+					echo '<td>' . $fieldName . '</td>';
+					$i = $i + 1;
+				}
+				echo '</tr>';
+				$i = 0;
+
+				while ($row = pg_fetch_row($result)) 
+				{
+					echo '<tr>';
+					$count = count($row);
+					$y = 0;
+					while ($y < $count)
+					{
+						$c_row = current($row);
+						echo '<td>' . $c_row . '</td>';
+						next($row);
+						$y = $y + 1;
+					}
+					echo '</tr>';
+					$i = $i + 1;
+				}
+				pg_free_result($result);
+
+				echo '</table>';
 				?>
 				<br>
 				<form id="myForm" action="action_page.php" method="post">
