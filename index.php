@@ -75,40 +75,15 @@ Author: Ken
 				<!--DISPLAY TASKS HERE-->
 				<?php
 				$student = $_SESSION['student'];
-				$result = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student";
-				//$statement = $db->prepare($query);
-                //$statement->execute();   
-                //$assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
+				$query = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student";
+				$statement = $db->prepare($query);
+                $statement->execute();   
+                $assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
 				
-				$i = 0;
-				echo '<table><tr>';
-				while ($i < pg_num_fields($query))
-				{
-					$fieldName = pg_field_name($result, $i);
-					echo '<td>' . $fieldName . '</td>';
-					$i = $i + 1;
-				}
-				echo '</tr>';
-				$i = 0;
+					$val = pg_fetch_result($query, 0, 0);
 
-				while ($row = pg_fetch_row($result)) 
-				{
-					echo '<tr>';
-					$count = count($row);
-					$y = 0;
-					while ($y < $count)
-					{
-						$c_row = current($row);
-						echo '<td>' . $c_row . '</td>';
-						next($row);
-						$y = $y + 1;
-					}
-					echo '</tr>';
-					$i = $i + 1;
-				}
-				pg_free_result($result);
-
-				echo '</table>';
+					echo "First field in the second row is: ", $val, "\n";
+				
 				?>
 				<br>
 				<form id="myForm" action="action_page.php" method="post">
