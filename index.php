@@ -73,6 +73,14 @@ Author: Ken
 				Your Tasks:
 				<br>
 				<!--DISPLAY TASKS HERE-->
+				<?php
+				$student = $_SESSION['student'];
+				$query = "SELECT * FROM assignment g WHERE g.student = $student";
+				$statement = $db->prepare($query);
+                $statement->execute();   
+                $assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
+				echo $assignment_data['task'];
+				?>
 				<br>
 				<form id="myForm" action="action_page.php" method="post">
 					Input Task: <input type="text" placeholder="NAME" name="r_name" required />
