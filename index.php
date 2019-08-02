@@ -75,11 +75,10 @@ Author: Ken
 				<!--DISPLAY TASKS HERE-->
 				<?php
 				$student = $_SESSION['student'];
-				$query = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student";
-				$result = pg_query($query);
-				$statement = $db->prepare($query);
-                $statement->execute();   
-                $assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
+				$result = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student";
+				//$statement = $db->prepare($query);
+                //$statement->execute();   
+                //$assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
 				
 				$i = 0;
 				echo '<table><tr>';
