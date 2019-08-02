@@ -80,9 +80,9 @@ Author: Ken
                 $statement->execute();   
                 $assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
 				
-					$val = pg_fetch_result($query, 0, 0);
+					
 
-					echo "First field in the second row is: ", $val, "\n";
+					echo $query;
 				
 				?>
 				<br>
