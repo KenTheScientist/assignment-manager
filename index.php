@@ -80,20 +80,7 @@ Author: Ken
                 $statement->execute();  
 
 				
-				echo "
-				<table>
-				  <tr>
-					<th>Name</th>
-					<th>Due Date</th> 
-					<th>Class</th>
-				  </tr><tr>";
-					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-						echo "<td>".$row["task_name"]."</td>";
-						echo "<td>".$row["due_date"]."</td>";
-						echo "<td>".$row["task_class"]."</td>";
-					}
-					echo "</tr></table>";
-				  
+				
 				
 				?>
 				
