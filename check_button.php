@@ -22,7 +22,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-DELETE FROM task WHERE task = $_GET['id'];//The button value;
+DELETE FROM task WHERE task = 8;//The button value;
 header("Location: login.php");
 exit();  
 
