@@ -86,13 +86,15 @@ Author: Ken
 					<th>Name</th>
 					<th>Due Date</th> 
 					<th>Class</th>
-				  </tr><tr>";
+				  </tr>";
 					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+						echo "<tr>";
 						echo "<td>one</td>";
 						echo "<td>two</td>";
 						echo "<td>three</td>";
+						echo "</tr>";
 					}
-					echo "</tr></table>";
+					echo "</table>";
 				  
 				
 				?>
