@@ -79,15 +79,41 @@ Author: Ken
 				$statement = $db->prepare($query);
                 $statement->execute();   
                 $assignment_data = $statement->fetch(PDO::FETCH_BOTH);
-				$result = pg_query($db,"SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student");
-				echo "<table>";
-				while($row=pg_fetch_assoc($result)){echo "<tr>";
-				echo "<td align='center' width='200'>" . $row['task_name'] . "</td>";
-				echo "<td align='center' width='200'>" . $row['due_date'] . "</td>";
-				echo "<td align='center' width='200'>" . $row['task_class'] . "</td>";
-				echo "</tr>";
+				
+				$query = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student";
+
+				$result = pg_query($query);
+
+				$i = 0;
+				echo '<table><tr>';
+				while ($i < pg_num_fields($result))
+				{
+					$fieldName = pg_field_name($result, $i);
+					echo '<td>' . $fieldName . '</td>';
+					$i = $i + 1;
 				}
-				echo "</table>";
+				echo '</tr>';
+				$i = 0;
+
+				while ($row = pg_fetch_row($result)) 
+				{
+					echo '<tr>';
+					$count = count($row);
+					$y = 0;
+					while ($y < $count)
+					{
+						$c_row = current($row);
+						echo '<td>' . $c_row . '</td>';
+						next($row);
+						$y = $y + 1;
+					}
+					echo '</tr>';
+					$i = $i + 1;
+				}
+				pg_free_result($result);
+
+				echo '</table>';
+				
 				?>
 				
 				<br>
