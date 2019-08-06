@@ -80,7 +80,20 @@ Author: Ken
                 $statement->execute();  
 
 				
-				
+				echo "
+				<table>
+				  <tr>
+					<th>Name</th>
+					<th>Due Date</th> 
+					<th>Class</th>
+				  </tr><tr>";
+					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+						echo "<td>one</td>";
+						echo "<td>two</td>";
+						echo "<td>three</td>";
+					}
+					echo "</tr></table>";
+				  
 				
 				?>
 				
