@@ -148,3 +148,15 @@ main {
 input {
 	color: black;
 }
+
+table {
+  /*border-collapse: collapse;*/
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+th, td {
+	padding: 10px;
+}
