@@ -88,20 +88,14 @@ Author: Ken
 					<th>Class</th>
 				  </tr><tr>";
 					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-						echo "<td>".$row["task_name"];."</td>";
-					}
-				  echo "<tr>";
-					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-						echo "<td>".$row["due_date"];."</td>";
-					}
-				  echo"</tr><tr>";
-					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-						echo "<td>".$row["task_class"];."</td>";
+						echo "<td>".$row["task_name"]."</td>";
+						echo "<td>".$row["due_date"]."</td>";
+						echo "<td>".$row["task_class"]."</td>";
 					}
 					echo "</tr></table>";
 				  
 				
-								?>
+				?>
 				
 				<br>
 				<form id="myForm" action="action_page.php" method="post">
