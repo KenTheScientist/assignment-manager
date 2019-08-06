@@ -162,6 +162,8 @@ th, td {
 }
 
 #check {
-	padding: 5px;
+	padding: 0px;
 	border: none;
+	width: 50px;
+	height 50px;
 }
