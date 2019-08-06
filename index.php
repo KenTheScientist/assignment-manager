@@ -89,7 +89,7 @@ Author: Ken
 				  </tr>";
 					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						echo "<tr>";
-						echo "<td>one</td>";
+						echo "<td>".$row["task_name]."</td>";
 						echo "<td>two</td>";
 						echo "<td>three</td>";
 						echo "</tr>";
