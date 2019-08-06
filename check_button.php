@@ -23,7 +23,7 @@ error_reporting(E_ALL);
 
 $sql = 'DELETE FROM task WHERE task = 8';
  
-$stmt = $this->pdo->prepare($sql);
+$stmt = $db->prepare($sql);
         
  
 $stmt->execute();
