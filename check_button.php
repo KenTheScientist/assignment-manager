@@ -21,10 +21,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$sql = 'DELETE FROM task WHERE task = 8';
- 
+$sql = 'DELETE FROM task WHERE task = :id';
+
 $stmt = $db->prepare($sql);
-        
+$stmt->bindValue(':id', $id);
  
 $stmt->execute();
  
