@@ -20,16 +20,16 @@ $db = get_db();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
+$id = _GET("id");
 $sql = 'DELETE FROM task WHERE task = :id';
 
 $stmt = $db->prepare($sql);
 $stmt->bindValue(':id', $id);
  
 $stmt->execute();
- 
 
-header("Location: login.php");
+
+header("Location: index.php");
 exit();  
 
 
