@@ -80,8 +80,7 @@ Author: Ken
                 $statement->execute();  
 
 				while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-					$assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
-					echo "<br>".$assignment_data["task_name"];
+					echo "<br>".$row["task_name"];
 				}
 				
 				?>
