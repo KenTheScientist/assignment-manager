@@ -79,26 +79,24 @@ Author: Ken
 				$statement = $db->prepare($query);
                 $statement->execute();  
 
-				while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-					echo "<br>".$row["task_name"];
-				}
+				
 				echo "
 				<table>
 				  <tr>
 					<th>Name</th>
 					<th>Due Date</th> 
 					<th>Class</th>
-				  </tr><tr>"
+				  </tr><tr>";
 					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						echo "<td>".$row["task_name"];."</td>";
 					}
 				  echo "<tr>";
 					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-						echo "<td>".$row["task_name"];."</td>";
+						echo "<td>".$row["due_date"];."</td>";
 					}
 				  echo"</tr><tr>";
 					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-						echo "<td>".$row["task_name"];."</td>";
+						echo "<td>".$row["task_class"];."</td>";
 					}
 					echo "</tr></table>";
 				  
