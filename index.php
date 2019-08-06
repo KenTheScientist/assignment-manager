@@ -75,7 +75,7 @@ Author: Ken
 				<!--DISPLAY TASKS HERE-->
 				<?php
 				$student = $_SESSION['student'];
-				$query = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student ORDER BY 'due_date' ASC";
+				$query = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student ORDER BY CONVERT(datetime,due_date) ASC";
 				$statement = $db->prepare($query);
                 $statement->execute();  
 
