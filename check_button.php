@@ -20,7 +20,8 @@ $db = get_db();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-$id = $_GET("id");
+
+$id = $_GET["id"];
 $sql = 'DELETE FROM task WHERE task = :id';
 
 $stmt = $db->prepare($sql);
