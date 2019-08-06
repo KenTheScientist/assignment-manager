@@ -78,9 +78,15 @@ Author: Ken
 				$query = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student";
 				$statement = $db->prepare($query);
                 $statement->execute();   
-                $assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
-				echo $assignment_data["task_name"];
-				
+                $assignment_data = $statement->fetch(PDO::FETCH_BOTH);
+				$result = pg_query($db,$query);
+				echo "<table>";
+				while($row=pg_fetch_assoc($result)){echo "<tr>";
+				echo "<td align='center' width='200'>" . $row['task_name'] . "</td>";
+				echo "<td align='center' width='200'>" . $row['due_date'] . "</td>";
+				echo "<td align='center' width='200'>" . $row['task_class'] . "</td>";
+
+				echo "</tr>";}echo "</table>";?>
 				?>
 				<br>
 				<form id="myForm" action="action_page.php" method="post">
