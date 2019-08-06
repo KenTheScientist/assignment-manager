@@ -21,8 +21,14 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+$sql = 'DELETE FROM task WHERE task = 8';
+ 
+$stmt = $this->pdo->prepare($sql);
+        
+ 
+$stmt->execute();
+ 
 
-//DELETE FROM task WHERE task = 8;//The button value;
 header("Location: login.php");
 exit();  
 
