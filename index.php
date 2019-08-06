@@ -90,8 +90,8 @@ Author: Ken
 					while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 						echo "<tr>";
 						echo "<td>".$row["task_name"]."</td>";
-						echo "<td>two</td>";
-						echo "<td>three</td>";
+						echo "<td>".$row["due_date"]."</td>";
+						echo "<td>".$row["task_class"]."</td>";
 						echo "</tr>";
 					}
 					echo "</table>";
