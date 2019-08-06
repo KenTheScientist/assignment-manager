@@ -78,12 +78,11 @@ Author: Ken
 				$query = "SELECT * FROM task INNER JOIN assignment ON assignment.task = task.task AND assignment.student = $student";
 				$statement = $db->prepare($query);
                 $statement->execute();  
-				
-				for($i = 1; $i < 1000; $i++){
+
+				while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
 					$assignment_data = $statement->fetch(PDO::FETCH_ASSOC);
 					echo "<br>".$assignment_data["task_name"];
 				}
-				
 				
 				?>
 				
