@@ -92,7 +92,7 @@ Author: Ken
 						echo "<td>".$row["task_name"]."</td>";
 						echo "<td>".$row["due_date"]."</td>";
 						echo "<td>".$row["task_class"]."</td>";
-						echo "<td><a href = 'check_button.php?id=".$row["task"]."'><button type='button'>Done</button></a></td>";
+						echo "<td><a href = 'check_button.php?id=".strval($row["task"])."'><button type='button'>Done</button></a></td>";
 						echo "</tr>";
 					}
 					echo "</table>";
