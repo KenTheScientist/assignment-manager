@@ -25,6 +25,7 @@ Author: Ken Thomson
     <?php $ROOT = '';
     include 'modules/head.php'; ?>
     <title>Homework Manager</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body>

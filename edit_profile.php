@@ -30,6 +30,7 @@ Author: Kenneth Thomson
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/register.js"></script>
     <title>Homework Manager</title>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
 </head>
 
 <body>
