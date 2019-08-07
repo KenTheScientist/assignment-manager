@@ -20,7 +20,7 @@ Author: Ken
 <head>
     <?php $ROOT = '';
     include 'modules/head.php'; ?>
-	
+	 
     <title>Homework Manager</title>
 </head>
 
