@@ -20,7 +20,7 @@ Author: Ken
 <head>
     <?php $ROOT = '';
     include 'modules/head.php'; ?>
-	 
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <title>Homework Manager</title>
 </head>
 
