@@ -1,16 +1,16 @@
 <?php
 // Start the session
-ini_set('session.gc_maxlifetime', 10);
-session_set_cookie_params(10);
+ini_set('session.gc_maxlifetime', 10000000);
+session_set_cookie_params(10000000);
 session_start();
-$expireAfter = 1;
+$expireAfter = 10000000;
  
 
 if(isset($_SESSION['last_action'])){
 
     $secondsInactive = time() - $_SESSION['last_action'];
 
-    $expireAfterSeconds = $expireAfter * 60;
+    $expireAfterSeconds = $expireAfter;
     if($secondsInactive >= $expireAfterSeconds){
 
         session_unset();
