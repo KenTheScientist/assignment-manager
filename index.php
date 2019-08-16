@@ -1,5 +1,6 @@
 <?php
 // Start the session
+session_set_cookie_params(30); // in seconds...session will last for 2 hours now
 session_start();
 // Initialize session variables
 if (!isset($_SESSION['student'])){
