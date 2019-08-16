@@ -3,7 +3,24 @@
 ini_set('session.gc_maxlifetime', 10);
 session_set_cookie_params(10);
 session_start();
-// Initialize session variables
+$expireAfter = 1;
+ 
+
+if(isset($_SESSION['last_action'])){
+
+    $secondsInactive = time() - $_SESSION['last_action'];
+
+    $expireAfterSeconds = $expireAfter * 60;
+    if($secondsInactive >= $expireAfterSeconds){
+
+        session_unset();
+        session_destroy();
+    }
+    
+}
+
+$_SESSION['last_action'] = time();
+
 if (!isset($_SESSION['student'])){
 $_SESSION['student'] = 1;}
 
