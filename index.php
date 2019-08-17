@@ -1,15 +1,10 @@
 <?php
 // Start the session
 session_set_cookie_params(10);
-session_save_path('/js');
 ini_set('session.gc_maxlifetime', '10');
 session_start();
-$expireAfter = 10000000;
- 
 
 
-
-$_SESSION['last_action'] = time();
 
 if (!isset($_SESSION['student'])){
 $_SESSION['student'] = 1;}
