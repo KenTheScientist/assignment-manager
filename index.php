@@ -1,10 +1,12 @@
 <?php
 // Start the session
-session_set_cookie_params(10);
-ini_set('session.gc_maxlifetime', '10');
+
 session_start();
 
-
+session.cookie_lifetime 0;
+session.gc_maxlifetime  10    10;
+session.use_cookies On  On;
+session_set_cookie_params(10);
 
 if (!isset($_SESSION['student'])){
 $_SESSION['student'] = 1;}
