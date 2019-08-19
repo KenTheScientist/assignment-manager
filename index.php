@@ -1,6 +1,6 @@
 <?php
 // Start the session
-
+ini_set('session.gc_maxlifetime', 10);
 session_start();
 
 
