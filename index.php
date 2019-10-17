@@ -113,15 +113,15 @@ Author: Ken
 					<button type="submit" class="submit_btn" id = "plus_sign">+</button><br>
 				</form>
 			</p>
-			<footer>
-			<div id="copyright">
-			© Kenneth Thomson 2019
-			</div>
-			</footer>
+			
            
 
         </main>
-        
+        <footer>
+			<div id="copyright">
+			© Kenneth Thomson 2019
+			</div>
+		</footer>
     </div>
 </body>
 
