@@ -1,6 +1,7 @@
 <?php
 // Start the session
-
+session_set_cookie_params(7200);
+session.gc_maxlifetime = 86400;
 session_start();
 
 
