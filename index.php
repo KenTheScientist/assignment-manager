@@ -75,6 +75,15 @@ Author: Ken
                     echo $student_data['display_name'];
                 ?>!</p>
 				<br>
+				
+				<form id="myForm" action="action_page.php" method="post">
+					Input Task: <input type="text" placeholder="NAME" name="r_name" required />
+					<input type="date" name="r_date" value="today" min="2019-01-01" max="2022-01-01" required>
+					<input type="text" placeholder="CLASS" name="r_class" required />
+					<button type="submit" class="submit_btn" id = "plus_sign">+</button><br>
+				</form>
+				<br>
+				<br>
 				Your Tasks:
 				<br><br>
 				<!--DISPLAY TASKS HERE-->
@@ -105,13 +114,7 @@ Author: Ken
 				
 				?>
 				
-				<br>
-				<form id="myForm" action="action_page.php" method="post">
-					Input Task: <input type="text" placeholder="NAME" name="r_name" required />
-					<input type="date" name="r_date" value="today" min="2019-01-01" max="2022-01-01" required>
-					<input type="text" placeholder="CLASS" name="r_class" required />
-					<button type="submit" class="submit_btn" id = "plus_sign">+</button><br>
-				</form>
+				
 			</p>
 			
            

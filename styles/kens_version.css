@@ -61,6 +61,8 @@ ul {
     list-style: none;
     margin-left: 0px;
     padding-left: 0px;
+	height: 50vw;
+	border-right: 6px solid white;
 }
 
 
@@ -104,7 +106,7 @@ form {
 
 main {
 	position: relative;
-	left: 200px;
+	left: 210px;
 	bottom: 260px;
 	width: 50vw;
 	right: 0px;
