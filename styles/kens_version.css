@@ -32,10 +32,15 @@ header {
 }
 
 #copyright{
-	position: fixed;
-	padding-top: 5px;
+	
+	padding-top: 10px;
+	padding-left:10px;
 	border-top: 6px solid white;
 	margin-top:10px;
+	width: 100vw;
+	margin-right: 0px;
+	padding-right:0px;
+	right:0px;
 }
 
 body {
@@ -102,6 +107,9 @@ main {
 	left: 200px;
 	bottom: 260px;
 	width: 50vw;
+	right: 0px;
+	margin-right: 0px;
+	padding-right: 0px;
 }
 
 #in_main {
