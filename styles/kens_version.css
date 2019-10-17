@@ -31,6 +31,12 @@ header {
     font-size: 1.2em;
 }
 
+#copyright{
+	
+	border-top: 6px solid white;
+	
+}
+
 body {
     margin-left: 0px;
     background-color: black;
