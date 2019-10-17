@@ -122,7 +122,7 @@ Author: Ken
         </main>
         <footer>
 			<div id="copyright">
-			© Kenneth Thomson 2019
+			© Kenneth Thomson 2019   Version 1.1.2
 			</div>
 		</footer>
     </div>
