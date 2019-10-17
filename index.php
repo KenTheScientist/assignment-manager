@@ -48,7 +48,7 @@ Author: Ken
 				<li><a href="login.php"><button type = "button">Login</button></a></li>
 				<li><a href="register.php"><button type = "button">Register</button></a></li>
 				<li><a href="edit_profile.php"><button type = "button">Profile</button></a></li>
-				
+				<li><img src="favicon.png" alt="Pencil" width="180" height="180"></li>
             </ul>
         </nav>
         <main>
@@ -122,7 +122,7 @@ Author: Ken
         </main>
         <footer>
 			<div id="copyright">
-			© Kenneth Thomson 2000000000
+			© Kenneth Thomson 2019
 			</div>
 		</footer>
     </div>

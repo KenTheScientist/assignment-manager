@@ -73,7 +73,11 @@ Author: Ken Thomson
                 </form>
             </section>
         </main>
-        
+        <footer>
+			<div id="copyright">
+			© Kenneth Thomson 2019
+			</div>
+		</footer>
     </div>
 </body>
 

@@ -91,7 +91,11 @@ Author: Kenneth Thomson
 
 
         </main>
-        
+        <footer>
+			<div id="copyright">
+			© Kenneth Thomson 2019
+			</div>
+		</footer>
     </div>
 </body>
 
